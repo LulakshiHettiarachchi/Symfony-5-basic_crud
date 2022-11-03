@@ -19,6 +19,12 @@ class Project
     #[ORM\Column(length: 3, nullable: true)]
     private ?string $Age = null;
 
+    #[ORM\Column(length: 10, nullable: true)]
+    private ?string $Gender = null;
+
+    #[ORM\Column(length: 255, nullable: true)]
+    private ?string $City = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -44,6 +50,30 @@ class Project
     public function setAge(?string $Age): self
     {
         $this->Age = $Age;
+
+        return $this;
+    }
+
+    public function getGender(): ?string
+    {
+        return $this->Gender;
+    }
+
+    public function setGender(?string $Gender): self
+    {
+        $this->Gender = $Gender;
+
+        return $this;
+    }
+
+    public function getCity(): ?string
+    {
+        return $this->City;
+    }
+
+    public function setCity(?string $City): self
+    {
+        $this->City = $City;
 
         return $this;
     }

@@ -11,6 +11,8 @@
                 <th>Id</th>
                 <th>Name</th>
                 <th>Age</th>
+                <th>Gender</th>
+                <th>Lives in colombo</th>
                 <th>actions</th>
             </tr>
         </thead>
@@ -20,6 +22,8 @@
                 <td>{{ project.id }}</td>
                 <td>{{ project.Name }}</td>
                 <td>{{ project.Age }}</td>
+                <td>{{ project.Gender }}</td>
+                <td>{{ project.City}}</td>
                 <td>
                     <a href="{{ path('app_project_show', {'id': project.id}) }}">show</a>
                     <a href="{{ path('app_project_edit', {'id': project.id}) }}">edit</a>
